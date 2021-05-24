@@ -1,15 +1,12 @@
 <?php
   $host = '127.0.0.1';
   $db   = 'Fantasy_Taverns';
-  $user = '';
-  $pass = '';
   $charset = 'utf8mb4';
-  $config = parse_ini_file("/srv/secrets/centos@localhost.cfg");
-$con = new PDO($config['type'].":host=".$config['host'].";dbname=".$config['dbname'], $config['username'], $config['password']);
+  $config = parse_ini_file("../../sqlcentos");
+//$con = new PDO($config['type'].":host=".$config['host'].";dbname=".$config['dbname'], $config['username'], $config['password']);
 
   $passwdHash = password_hash("password",PASSWORD_DEFAULT);
   $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-  $dsn = $config['type']."host=".$config['host'].";dbname=".$config['dbname'];
   $options = [
       PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
       PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
