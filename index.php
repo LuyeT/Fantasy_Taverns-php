@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<p>
 <?php
   $host = '127.0.0.1';
   $db   = 'Fantasy_Taverns';
@@ -34,3 +42,6 @@
     }
   }
 ?>
+</p>
+</body>
+</html>
