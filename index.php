@@ -5,12 +5,11 @@
   <title></title>
 </head>
 <body>
-<p>
 <?php
   $host = '127.0.0.1';
   $db   = 'Fantasy_Taverns';
   $charset = 'utf8mb4';
-  $config = parse_ini_file("../../sqlcentos");
+  $config = parse_ini_file("../../../sqlcentos.ini");
 //$con = new PDO($config['type'].":host=".$config['host'].";dbname=".$config['dbname'], $config['username'], $config['password']);
 
   $passwdHash = password_hash("password",PASSWORD_DEFAULT);
@@ -29,8 +28,8 @@
 
 //$query = "INSERT INTO Users (name,passsword,dateOfBirth) VALUES
 //(Thomas,$passwdHash,251088)";
-  $stmt = $pdo->prepare('INSERT INTO Users (name,password,dateOfBirth) VALUES (?,?,?)');
-  $stmt->execute(['Thomas',$passwdHash,251088]);
+//  $stmt = $pdo->prepare('INSERT INTO Users (name,password,dateOfBirth) VALUES (?,?,?)');
+//  $stmt->execute(['Thomas',$passwdHash,251088]);
 
   $stmt = $pdo->query('SELECT name,password,dateOfBirth FROM Users');
   while ($row = $stmt->fetch()){
@@ -42,6 +41,5 @@
     }
   }
 ?>
-</p>
 </body>
 </html>
