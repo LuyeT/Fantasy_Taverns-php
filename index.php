@@ -9,9 +9,7 @@
   $host = '127.0.0.1';
   $db   = 'Fantasy_Taverns';
   $charset = 'utf8mb4';
-  $config = parse_ini_file("../../../sqlcentos.ini");
-//$con = new PDO($config['type'].":host=".$config['host'].";dbname=".$config['dbname'], $config['username'], $config['password']);
-
+  $config = parse_ini_file("../../sqlcentos.ini");
   $passwdHash = password_hash("password",PASSWORD_DEFAULT);
   $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
   $options = [
