@@ -27,7 +27,7 @@
 //$query = "INSERT INTO Users (name,passsword,dateOfBirth) VALUES
 //(Thomas,$passwdHash,251088)";
 //  $stmt = $pdo->prepare('INSERT INTO Users (name,password,dateOfBirth) VALUES (?,?,?)');
-//  $stmt->execute(['Thomas',$passwdHash,251088]);
+//  $stmt->execute(['Thomas',$passwdHash,020188]);
 
   $stmt = $pdo->query('SELECT name,password,dateOfBirth FROM Users');
   while ($row = $stmt->fetch()){
