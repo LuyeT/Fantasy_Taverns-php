@@ -24,8 +24,6 @@
        throw new \PDOException($e->getMessage(), (int)$e->getCode());
   }
 
-//$query = "INSERT INTO Users (name,passsword,dateOfBirth) VALUES
-//(Thomas,$passwdHash,251088)";
 //  $stmt = $pdo->prepare('INSERT INTO Users (name,password,dateOfBirth) VALUES (?,?,?)');
 //  $stmt->execute(['Thomas',$passwdHash,020188]);
 
